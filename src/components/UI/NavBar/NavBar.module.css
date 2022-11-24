@@ -1,11 +1,13 @@
-.navBar{
-    height: 70px;
-    background-color: #f1f1f1;
-    box-shadow: 0 3px 8px #d5d5d5;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.navBar {
+  height: 70px;
+  background-color: #f1f1f1;
+  box-shadow: 0 3px 8px #d5d5d5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
 }
-.navBar_input{
-    width: 250px;
+.navBar_input {
+  width: 250px;
+  margin-right: 20px;
 }

@@ -1,0 +1,8 @@
+.noteCard{
+    padding: 15px;
+    border: 1px solid #d5d5d5;
+    cursor: pointer;
+}
+.noteCard:focus{
+    background-color: #f1f1f1;
+}

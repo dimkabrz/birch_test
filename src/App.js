@@ -8,6 +8,14 @@ import { Context } from "./components/Context";
 function App() {
   const [notes, setNotes] = useState([]);
   const [chosenNote, setChosenNote] = useState({});
+  const deleteNote = async (chosenNote) => {
+    await axios.delete(
+        `http://localhost:3001/notes/${chosenNote.id}`
+    );
+  }
+
+  const [redactNote, setRedactNote] = useState(false)
+
 
   const getNotes = async () => {
     const response = await axios.get(`http://localhost:3001/notes`);
@@ -20,7 +28,7 @@ function App() {
 
   return (
     <Context.Provider
-      value={{ notes, getNotes, setChosenNote, chosenNote, setNotes }}
+      value={{ notes, getNotes, setChosenNote, chosenNote, setNotes, deleteNote, redactNote, setRedactNote}}
     >
       <div className="App">
         <NavBar />

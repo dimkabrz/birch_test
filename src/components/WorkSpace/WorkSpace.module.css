@@ -1,4 +1,4 @@
-.workSpace{
-    display: flex;
-    height: calc(100vh - 70px);
+.workSpace {
+  display: flex;
+  height: calc(100vh - 70px);
 }

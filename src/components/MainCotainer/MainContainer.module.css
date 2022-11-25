@@ -1,9 +1,12 @@
-.mainContainer_textarea{
-    border:none;
-    resize: none;
-    margin: 15px;
+.mainContainer{
+  padding: 20px;
 }
-.mainContainer_textarea:focus{
-    border: none;
-    box-shadow: 0 0 0 0;
+.mainContainer_textarea{
+  border: none;
+  resize: none;
+  margin: 20px;
+}
+.mainContainer_textarea:focus {
+  border: none;
+  box-shadow: 0 0 0 0;
 }

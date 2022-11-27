@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classes from "./SideBar.module.css";
 import NoteCard from "../../NoteCard/NoteCard";
-import { Context } from "../../Context";
+import { Context } from "../../../constants/Context";
 
 const SideBar = () => {
   const { notes } = useContext(Context);

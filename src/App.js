@@ -2,23 +2,17 @@ import "./App.css";
 import NavBar from "./components/UI/NavBar/NavBar";
 import WorkSpace from "./components/WorkSpace/WorkSpace";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Context } from "./components/Context";
+import { Context } from "./constants/Context";
+import api from "./API/api";
 
 function App() {
   const [notes, setNotes] = useState([]);
   const [chosenNote, setChosenNote] = useState({});
-  const deleteNote = async (chosenNote) => {
-    await axios.delete(
-        `http://localhost:3001/notes/${chosenNote.id}`
-    );
-  }
 
-  const [redactNote, setRedactNote] = useState(false)
+  const [redactNote, setRedactNote] = useState(false);
 
-
-  const getNotes = async () => {
-    const response = await axios.get(`http://localhost:3001/notes`);
+  const getNotes = async (searchText) => {
+    const response = await api.getNotes(searchText);
     setNotes(response.data);
   };
 
@@ -28,7 +22,14 @@ function App() {
 
   return (
     <Context.Provider
-      value={{ notes, getNotes, setChosenNote, chosenNote, setNotes, deleteNote, redactNote, setRedactNote}}
+      value={{
+        notes,
+        getNotes,
+        setChosenNote,
+        chosenNote,
+        redactNote,
+        setRedactNote,
+      }}
     >
       <div className="App">
         <NavBar />

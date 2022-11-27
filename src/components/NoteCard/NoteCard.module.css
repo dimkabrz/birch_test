@@ -1,13 +1,27 @@
-.noteCard{
-    padding: 15px;
-    border: 1px solid #d5d5d5;
-    cursor: pointer;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    height: 40px;
+.noteCard {
+  padding: 15px;
+  border: 1px solid #d5d5d5;
+  cursor: pointer;
+  overflow: hidden;
+  height: 40px;
 }
-.noteCard:focus{
-    background-color: #f1f1f1;
+.noteCard_p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.noteCard_h {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.noteCard_focus {
+  padding: 15px;
+  border: 1px solid #d5d5d5;
+  cursor: pointer;
+  overflow: hidden;
+  height: 40px;
+  background-color: #f1f1f1;
 }
